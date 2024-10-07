@@ -1,6 +1,7 @@
 print("Welcome to the Elite 101 Prework Chatbot!")
 name = input('Please input your name here:')
 print('Hello,', name)
+age = input('Please input your age here:')
 print('How may I assist you today?')
 print('1. Placeholder Selection')
 print('2. Placeholder Selection')
