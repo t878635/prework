@@ -1,18 +1,25 @@
-print("Welcome to the Elite 101 Prework Chatbot!")
-name = input('Please input your name here:')
-print('Hello,', name)
-age = input('Please input your age here:')
-print('How may I assist you today?')
-print('1. Placeholder Selection')
-print('2. Placeholder Selection')
-print('3. PLaceholder Selection')
-print('4. End program')
-num = int(input('Please select a numerical option from the list above.'))
-if num == 1:
-    print('Stop it. Get some help.')
-if num == 2:
-    print('Cool story, bro.')
-if num == 3:
-    print('Error 404')
-if num == 4:
-    print("It's about time you left. Finally, peace and quiet.")
+import random
+user_guess = ""
+n = 5
+word_list = ["eevee", "addie", "jenna", "clone", "games", "lists", "codes"]
+random_word = list(random.choice(word_list))
+def word_checker(user_guess, n):
+    if n == 0:
+        return
+    user_guess = list(input("Type in a five-letter word:"))
+    while user_guess != random_word:
+        for i in user_guess:
+            if i in random_word and user_guess.index == random_word.index:
+                print("\033[0;32m" + i + "\033[0m")
+
+            elif i in random_word:
+                print("\033[34m" + i + "\033[0m")
+            else:
+                print(i)
+        break
+    print(word_checker(user_guess, n))
+    word_checker(user_guess, n - 1)         
+    return
+word_checker(user_guess, n)
+
+
